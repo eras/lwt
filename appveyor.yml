@@ -4,9 +4,9 @@ shallow_clone: true
 
 environment:
   matrix:
-    - {SYSTEM: mingw, ARCH: x86_64, COMPILER: 4.03}
+    # - {SYSTEM: mingw, ARCH: x86_64, COMPILER: 4.03}
     - {SYSTEM: cygwin, ARCH: x86, COMPILER: 4.04}
-    - {SYSTEM: cygwin, ARCH: x86, COMPILER: 4.04, LIBEV: yes}
+    # - {SYSTEM: cygwin, ARCH: x86, COMPILER: 4.04, LIBEV: yes}
 
   global:
     LWT_WARNINGS_AS_ERRORS: yes
@@ -14,7 +14,7 @@ environment:
     # Uncomment to debug build with RDP. Alternatively, create the file
     # appveyor-debug in the repository root. The latter option avoids
     # invalidating the AppVeyor dependency cache.
-    # LWT_APPVEYOR_DEBUG: yes
+    LWT_APPVEYOR_DEBUG: yes
 
 install:
   - 'IF EXIST C:\projects\lwt\appveyor-debug (SET LWT_APPVEYOR_DEBUG=yes)'

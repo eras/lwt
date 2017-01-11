@@ -20,7 +20,7 @@ then
     # lwt_glib is not tested at the moment; this is for future-proofing.
     opam pin add -y --no-action lwt_glib .
 
-    opam install -y --deps-only lwt
+    opam install -y --verbose --deps-only lwt
     # Install OUnit here; otherwie --build-test on installation of Lwt seems to
     # trigger recompilation of ocamlmod.
     opam install -y ounit
